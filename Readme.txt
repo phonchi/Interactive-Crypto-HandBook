@@ -1,3 +1,9 @@
+This is a quick tour for cryptography in chinese
+
+Hope the interactive style could help you quickly capture the ideas behind modern cryptography 
+
+Reference:
+
 Nacl in HW
 http://eprint.iacr.org/2016/330.pdf
 
