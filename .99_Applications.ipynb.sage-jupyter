@@ -1,3 +1,0 @@
-{"kernelspec":{"display_name":"Python 2 (SageMath)","language":"python","name":"python2"},"language_info":{"codemirror_mode":{"name":"ipython","version":2},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython2","version":"2.7.10"}}
-{"cell_type":"markdown","metadata":{"collapsed":false,"trusted":false},"source":"## Milagro\n\nhttp://milagro.incubator.apache.org/\n\nhttps://github.com/miracl/milagro-crypto-c\n\n## Demo\n\nhttp://tcb.miracl.com/#\n\nhttps://m-pindemo.certivox.org/\n\nawesome iot"}
-{"cell_type":"code","execution_count":null,"metadata":{"collapsed":true,"trusted":true},"outputs":[],"source":""}
