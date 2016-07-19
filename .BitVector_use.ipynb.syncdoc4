@@ -1,0 +1,3 @@
+{"notebook_name":"BitVector_use.ipynb"}
+""︡{"metadata":{"collapsed":false,"trusted":true},"cell_type":"code","execution_count":3,"outputs":[{"output_type":"error","ename":"SyntaxError","evalue":"invalid syntax (<ipython-input-3-4ec39b98fe68>, line 1)","traceback":["\u001b[1;36m  File \u001b[1;32m\"<ipython-input-3-4ec39b98fe68>\"\u001b[1;36m, line \u001b[1;32m1\u001b[0m\n\u001b[1;33m    EncryptForFun.py  message_file.txt  output.txt\u001b[0m\n\u001b[1;37m                                 ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m invalid syntax\n"]}]}
+""︡{"metadata":{"trusted":true,"collapsed":true},"cell_type":"code","execution_count":null,"outputs":[]}

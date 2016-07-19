@@ -1,0 +1,112 @@
+""
+{"patch":[[[[1,"## Classical\n### Algebraic attack:\nYou express the plaintext-to-ciphertext relationship as a system of equations. Given a set of (plaintext, ciphertext) pairs, you try to solve the equations for the encryption key.\n\nAs you will , encryption algorithms involve nonlinearities. In algebraic attacks, one attempts to **introduce additional variables into the system of equations and make nonlinear equations look linear**.\n\n### Time-memory tradeoff in attacking ciphers: \nThe brute-force and the codebook attacks represent two opposite cases in terms of time versus memory needs of the algorithms. Pure brute-force attacks have very little memory needs, but can require inordinately long times to scan through all possible keys. On the other hand, codebook attacks can in principle yield results instantaneously, but their memory needs can be humongously large. Just imagine a codebook for a 64-bit block cipher; it may need as many as 264 rows in it. In some cases, by trading off memory for time, it is possible to devise more effective attacks that are sometimes referred to as time-memory tradeoff attacks.\n\n\n“All internet communications are character based” data file available to the TCP/IP engine in your computer could corrupt your data if it is not based on just printable characters.(Base64, this 64-element set consists of the characters A-Z, a-z, 0-9, ‘+’, and ‘/’.])\n\n\n## Block Cipher\n### Diffusion and confusion are the two cornerstones of block cipher design.\nNote that the goal of the substitution step implemented by the S-box is to introduce diffusion in the generation of the output from the input. Diffusion means that each plaintext bit must affect as many ciphertext bits as possible.\n\nThe strategy used for creating the different round keys from the main key is meant to introduce confusion into the encryption process. Confusion in this context means that the relation-ship between the encryption key and the ciphertext must be as complex as possible. Another way of describing confusion would be that each bit of the key must affect as many bits as possible of the output ciphertext block.\n> Also see substitution and permutation"]],0,0,0,2151]],"time":1458291009794}
+{"patch":[[[[0,"perm"],[-1,"utation"]],2140,2140,11,4]],"time":1456666633865}
+{"patch":[[[[0,"and "],[-1,"perm"]],2136,2136,8,4]],"time":1456666631863}
+{"patch":[[[[0,"ubstitut"],[-1,"ion and "]],2124,2124,16,8]],"time":1456666629865}
+{"patch":[[[[0,"so see subst"],[-1,"itut"]],2116,2116,16,12]],"time":1456666627863}
+{"patch":[[[[0,"so s"],[-1,"ee subst"]],2116,2116,12,4]],"time":1456666625863}
+{"patch":[[[[0,".\n> "],[-1,"Also s"]],2110,2110,10,4]],"time":1456666623868}
+{"patch":[[[[0,"ck.\n"],[-1,"> "]],2108,2108,6,4]],"time":1456666621862}
+{"patch":[[[[0,"t block."],[-1,"\n"]],2103,2103,9,8]],"time":1456666619862}
+{"patch":[[[[0,"k cipher"],[-1," "],[1,"\n"],[0,"design.\n"]],1455,1455,17,17]],"time":1456666617302}
+{"patch":[[[[0," Cipher\n"],[-1,"### "],[0,"Diffusio"]],1387,1387,20,16]],"time":1456666615300}
+{"patch":[[[[0,"her\n"],[-1,"Diffusion and confusion are the two cornerstones of block cipher\ndesign."],[0,"\nNot"]],1391,1391,80,8]],"time":1456666613299}
+{"patch":[[[[0," Cipher\n"],[-1,"\n"],[0,"Note tha"]],1387,1387,17,16]],"time":1456666611303}
+{"patch":[[[[0," as many bits as"],[-1," "],[1,"\n"],[0,"possible of the "]],1977,1977,33,33]],"time":1456666601572}
+{"patch":[[[[0,"onfusion"],[-1," "],[0,"would be"]],1923,1923,17,16]],"time":1456666599573}
+{"patch":[[[[0,"onfusion"],[1,"\n"],[0,"would be"]],1923,1923,16,17]],"time":1456666597573}
+{"patch":[[[[0," must be"],[-1," "],[1,"\n"],[0,"as compl"]],1863,1863,17,17]],"time":1456666593991}
+{"patch":[[[[0,"elation-"],[1,"\n"],[0,"ship bet"]],1805,1805,16,17]],"time":1456666589988}
+{"patch":[[[[0,"from the"],[-1," "],[0,"main key"]],1684,1684,17,16],[[[0,"cryption"],[-1," "],[1,"\n"],[0,"process."]],1744,1744,17,17]],"time":1456666587490}
+{"patch":[[[[0,"from the"],[1,"\n"],[0,"main key"]],1684,1684,16,17]],"time":1456666585490}
+{"patch":[[[[0,"e.\n\n"],[-1,"The strategy used for creating the different round keys from the\nmain key is meant to introduce confusion into the encryption\nprocess. Confusion in this context means that the relation-\nship between the encryption key and the ciphertext must be\nas complex as possible. Another way of describing confusion\nwould be that each bit of the key must affect as many bits as\npossible of the output ciphertext block."]],1624,1624,411,4]],"time":1456666583367}
+{"patch":[[[[0,"ossible."],[-1,"\n\n"]],1618,1618,10,8]],"time":1456666577164}
+{"patch":[[[[0,"bit must"],[-1," "],[1,"\n"],[0,"affect a"]],1574,1574,17,17]],"time":1456666575166}
+{"patch":[[[[0,"e output"],[-1," "],[0,"from the"]],1513,1513,17,16]],"time":1456666573164}
+{"patch":[[[[0,"d by the"],[-1," "],[1,"\n"],[0,"S-box is"]],1449,1449,17,17],[[[0,"e output"],[1,"\n"],[0,"from the"]],1513,1513,16,17]],"time":1456666571001}
+{"patch":[[[[0," Cip"],[-1,"her\nNote that the goal of the substitution step implemented by the\nS-box is to introduce diffusion in the generation of the output\nfrom the input. Diffusion means that each plaintext bit must\naffect as many ciphertext bits as possible."]],1387,1387,239,4]],"time":1456666567001}
+{"patch":[[[[0,"lock"],[-1," Cip"]],1383,1383,8,4]],"time":1456666565001}
+{"patch":[[[[0,"/’.])\n\n\n"],[-1,"## "],[0,"Block"]],1371,1371,16,13]],"time":1456666563003}
+{"patch":[[[[0,".])\n\n\nBl"],[-1,"ock"]],1373,1373,11,8]],"time":1456666561002}
+{"patch":[[[[0,".])\n"],[-1,"\n\nBl"]],1373,1373,8,4]],"time":1456666559002}
+{"patch":[[[[0,"d ‘/’.])"],[-1,"\n"]],1368,1368,9,8]],"time":1456666557046}
+{"patch":[[[[0,"aracters"],[-1," "],[1,"\n"],[0,"A-Z, a-z"]],1337,1337,17,17]],"time":1456664153179}
+{"patch":[[[[0,"P engine"],[-1," "],[0,"in your "]],1192,1192,17,16]],"time":1456664151179}
+{"patch":[[[[0,"P engine"],[1,"\n"],[0,"in your "]],1192,1192,16,17]],"time":1456664149180}
+{"patch":[[[[0,"rs.("],[-1,"Base64, this 64-element set consists of the characters\nA-Z, a-z, 0-9, ‘+’, and ‘/’.]"],[0,")"]],1287,1287,89,5]],"time":1456664146967}
+{"patch":[[[[0,"ers."],[-1,"()"]],1286,1286,6,4]],"time":1456664144973}
+{"patch":[[[[0,"based on"],[-1," "],[1,"\n"],[0,"just pri"]],1255,1255,17,17]],"time":1456664135751}
+{"patch":[[[[0,"ed” "],[-1,"data file available to the TCP/IP engine\nin your computer could corrupt your data if it is not based on\njust printable characters."]],1156,1156,134,4]],"time":1456664133752}
+{"patch":[[[[0,"r based”"],[-1," "]],1151,1151,9,8]],"time":1456664131790}
+{"patch":[[[[0,"et commu"],[1,"-\n"],[0,"nication"]],1121,1121,16,18]],"time":1456664113128}
+{"patch":[[[[0,".\n\n\n"],[-1,"“All internet commu-\nnications are character based”"]],1106,1106,55,4]],"time":1456664111129}
+{"patch":[[[[0,"tacks.\n\n"],[-1,"\n"]],1101,1101,9,8]],"time":1456664109133}
+{"patch":[[[[0,"ttacks.\n"],[-1,"\n"]],1100,1100,9,8]],"time":1456663924725}
+{"patch":[[[[0,"attacks."],[-1,"\n"]],1099,1099,9,8]],"time":1456663922725}
+{"patch":[[[[-1,"## "],[0,"Classica"]],0,0,11,8]],"time":1456663919737}
+{"patch":[[[[0,"Cl"],[-1,"assical"],[0,"\n###"]],0,0,13,6]],"time":1456663915736}
+{"patch":[[[[-1,"Cl"],[1,"c"],[0,"\n###"]],0,0,6,5]],"time":1456663913736}
+{"patch":[[[[-1,"c"],[0,"\n### Alg"]],0,0,9,8]],"time":1456663911736}
+{"patch":[[[[1," "],[0,"\n### Algebra"]],0,0,12,13]],"time":1456663909718}
+{"patch":[[[[0,"f memory"],[-1," "],[0,"for time"]],966,966,17,16],[[[0,"that are"],[-1," "],[1,"\n"],[0,"sometime"]],1032,1032,17,17]],"time":1456663830838}
+{"patch":[[[[0,"f memory"],[1,"\n"],[0,"for time"]],966,966,16,17]],"time":1456663828835}
+{"patch":[[[[0,"ge. Just"],[-1," "],[0,"imagine "]],844,844,17,16],[[[0," need as"],[-1," "],[1,"\n"],[0,"many as "]],904,904,17,17]],"time":1456663566946}
+{"patch":[[[[0,"ge. Just"],[1,"\n"],[0,"imagine "]],844,844,16,17]],"time":1456663564949}
+{"patch":[[[[0,"anta"],[-1,"neously, but their memory needs can be humongously large. Just\nimagine a codebook for a 64-bit block cipher; it may need as\nmany as 264 rows in it. In some cases, by trading off memory\nfor time, it is possible to devise more effective attacks that are\nsometimes referred to as time-memory tradeoff attacks."]],786,786,310,4]],"time":1456663562839}
+{"patch":[[[[0,"instanta"],[1,"-"]],782,782,8,9]],"time":1456663560841}
+{"patch":[[[[0,"he other"],[-1," "],[0,"hand, co"]],719,719,17,16]],"time":1456663546611}
+{"patch":[[[[0,"he other"],[1,"\n"],[0,"hand, co"]],719,719,16,17]],"time":1456663544607}
+{"patch":[[[[0,"e inordi"],[1,"-\n"],[0,"nately l"]],654,654,16,18]],"time":1456663539220}
+{"patch":[[[[0,"te-force"],[-1," "],[1,"\n"],[0,"attacks "]],592,592,17,17]],"time":1456663537217}
+{"patch":[[[[0,"te-force"],[-1," "],[0,"and the "]],465,465,17,16],[[[0,"in terms"],[-1," "],[1,"\n"],[0,"of time "]],527,527,17,17]],"time":1456663535216}
+{"patch":[[[[0,"*.\n\n### "],[-1,"T"],[0,"ime-memo"]],406,406,17,16],[[[0,"te-force"],[1,"\n"],[0,"and the "]],464,464,16,17]],"time":1456663533217}
+{"patch":[[[[0,"*.\n\n### "],[1,"t"],[0,"ime-memo"]],406,406,16,17]],"time":1456663529105}
+{"patch":[[[[0,"iphers: "],[-1,"\n"],[0,"The brut"]],449,449,17,16]],"time":1456663526694}
+{"patch":[[[[0,"\n###"],[-1," time-memory tradeoff in attacking ciphers: The brute-force\nand the codebook attacks represent two opposite cases in terms\nof time versus memory needs of the algorithms. Pure brute-force\nattacks have very little memory needs, but can require inordi-\nnately long times to scan through all possible keys. On the other\nhand, codebook attacks can in principle yield results instanta-"]],409,409,383,4]],"time":1456663523657}
+{"patch":[[[[0,"near**.\n"],[-1,"\n###"]],401,401,12,8]],"time":1456663521657}
+{"patch":[[[[0," \n###"],[-1," "],[0,"Algebrai"]],0,0,14,13]],"time":1456663519657}
+{"patch":[[[[0," \n##"],[-1,"#"],[1," "],[0,"Algebrai"]],0,0,13,13]],"time":1456663517658}
+{"patch":[[[[0," \n##"],[-1," "],[0,"Algebrai"]],0,0,13,12]],"time":1456663515662}
+{"patch":[[[[0," \n"],[-1,"##"],[0,"Alge"]],0,0,8,6]],"time":1456663513657}
+{"patch":[[[[0," \n"],[1," 1. "],[0,"Algebrai"]],0,0,10,14]],"time":1456663511661}
+{"patch":[[[[0,"attack:\n"],[1," \n"],[0,"You expr"]],16,16,16,18]],"time":1456663509660}
+{"patch":[[[[0,"tack:\n \n"],[1,"\n"],[0,"You expr"]],18,18,16,17]],"time":1456663507658}
+{"patch":[[[[-1," \n 1."],[0," Alg"]],0,0,9,4],[[[0," attack:"],[-1,"\n"],[0," \n\nYou e"]],10,10,17,16]],"time":1456663505662}
+{"patch":[[[[1,"1."],[0," Algebra"]],0,0,8,10]],"time":1456663503659}
+{"patch":[[[[0,"ttack: \n"],[-1,"\n"],[0,"You expr"]],14,14,17,16]],"time":1456663497645}
+{"patch":[[[[0,"1"],[-1,". "],[0,"Algebrai"]],0,0,11,9]],"time":1456663495605}
+{"patch":[[[[-1,"1"],[0,"Alge"]],0,0,5,4]],"time":1456663493629}
+{"patch":[[[[0,"near**.\n"],[1,"\n"]],396,396,8,9]],"time":1456663395629}
+{"patch":[[[[0,"ear**.\n\n"],[1,"$T_1$$$  $$"]],397,397,8,19]],"time":1456663393626}
+{"patch":[[[[0,"T_1$"],[-1,"$$  $$"]],406,406,10,4]],"time":1456663389920}
+{"patch":[[[[0,"*.\n\n$T_1"],[1,"  "],[0,"$"]],401,401,9,11]],"time":1456663385361}
+{"patch":[[[[0,".\n\n$T_1 "],[-1," "],[0,"$"]],402,402,10,9]],"time":1456663383361}
+{"patch":[[[[0,"*.\n\n$T_1"],[-1," "],[0,"$"]],401,401,10,9]],"time":1456663381363}
+{"patch":[[[[0,"*.\n\n$T_1"],[1," "],[0,"$"]],401,401,9,10]],"time":1456663378807}
+{"patch":[[[[0,".\n\n$T_1 "],[1," "],[0,"$"]],402,402,9,10]],"time":1456663376846}
+{"patch":[[[[0,".\n\n$"],[-1,"T_1"],[0,"  $"]],402,402,10,7]],"time":1456663374419}
+{"patch":[[[[0,"*.\n\n"],[-1,"$  $"]],401,401,8,4]],"time":1456663369070}
+{"patch":[[[[0,"near**.\n"],[-1,"\n"]],396,396,9,8]],"time":1456663346488}
+{"patch":[[[[0,"inear**."],[-1,"\n"]],395,395,9,8]],"time":1456663344488}
+{"patch":[[[[0,"ou will "],[1,"**see*"],[0,", encryp"]],204,204,16,22]],"time":1456663342488}
+{"patch":[[[[0,"l **see*"],[1,"*"],[0,", encryp"]],210,210,16,17]],"time":1456663340488}
+{"patch":[[[[0,"ill "],[-1,"**"],[0,"see"],[-1,"**"],[0,", en"]],208,208,15,11]],"time":1456663337810}
+{"patch":[[[[0," linear*"],[-1,"*"],[0,"."]],396,396,10,9]],"time":1456663335813}
+{"patch":[[[[0,"k linear"],[-1,"*"],[0,"."]],395,395,10,9]],"time":1456663333647}
+{"patch":[[[[0,"riables "],[1,"**"],[0,"into the"]],326,326,16,18]],"time":1456663331419}
+{"patch":[[[[0,"riables "],[-1,"**"],[0,"into the"]],326,326,18,16]],"time":1456663329420}
+{"patch":[[[[0," to "],[-1,"**"],[0,"intr"]],297,297,10,8]],"time":1456663324823}
+{"patch":[[[[0,"ons look"],[-1," "],[1,"\n"],[0,"linear."]],386,386,16,16]],"time":1456663322822}
+{"patch":[[[[0,"ariables"],[-1," "],[1,"\n"],[0,"into the"]],323,323,17,17]],"time":1456663320836}
+{"patch":[[[[0,"ties. In"],[-1," "],[0,"algebrai"]],257,257,17,16]],"time":1456663318826}
+{"patch":[[[[0,"ties. In"],[1,"\n"],[0,"algebrai"]],257,257,16,17]],"time":1456663316829}
+{"patch":[[[[0,"on key.\n"],[-1,"\n"],[0,"As you w"]],191,191,17,16]],"time":1456663314824}
+{"patch":[[[[0,"text, cipher"],[1,"-\n"],[0,"text) pairs,"]],119,119,24,26]],"time":1456663308765}
+{"patch":[[[[0,"relation"],[1,"\n"],[0,"ship as "]],59,59,16,17]],"time":1456663306765}
+{"patch":[[[[0,"relation"],[1,"-"],[0,"\nship as"]],59,59,16,17]],"time":1456663304766}
+{"patch":[[[[0,"attack: "],[-1,"\n"],[0,"You expr"]],10,10,17,16]],"time":1456663301163}
+{"patch":[[[[-1,"A"],[0,"lgebraic"]],0,0,9,8]],"time":1456663298711}
+{"patch":[[[[1,"   "],[0,"lgebraic attack: You"]],0,0,20,23]],"time":1456663296714}
+{"patch":[[[[-1,"   "],[0,"lgeb"]],0,0,7,4]],"time":1456663294712}
+{"patch":[[[[1,"a"],[0,"lgebraic attack: You"]],0,0,20,21]],"time":1456663292715}
+{"patch":[[[[-1,"algebraic attack: You express the plaintext-to-ciphertext relation-\nship as a system of equations. Given a set of (plaintext, cipher-\ntext) pairs, you try to solve the equations for the encryption key.\nAs you will see, encryption algorithms involve nonlinearities. In\nalgebraic attacks, one attempts to introduce additional variables\ninto the system of equations and make nonlinear equations look\nlinear."]],0,0,404,0]],"time":1456663289121}

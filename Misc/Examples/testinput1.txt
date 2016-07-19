@@ -1,0 +1,12 @@
+A hungry brown fox jumped over a lazy wild dog.
+
+aaaaaaaaaaaa
+
+jjjjjjjjjjjjjjjjj
+
+orDemo.py
+
+The BitVector.py file included in this directory is just to
+support the code in the BitVectorDemo.py file in case you
+are testing the demo code before carrying out a proper
+install of the BitVector module.

@@ -1,0 +1,34 @@
+{"notebook_name":"03_Elliptic Curve.ipynb"}
+"Constructed....XD"︡{"metadata":{},"cell_type":"markdown"}
+"%matplotlib inline\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nprint 'Numpy version: ', np.__version__"︡{"metadata":{"collapsed":false,"trusted":true},"cell_type":"code","execution_count":1,"outputs":[]}
+"If you're first getting started with ECC, there are two important things that you might want to realize before continuing:\n\n1. \"Elliptic\" is not elliptic in the sense of a \"oval circle\".\n2. \"Curve\" is also quite misleading if we're operating in the field $F_p$. The drawing that many pages show of a elliptic curve in $R$ is not really what you need to think of when transforming that curve into $F_p$. Rather than a real \"curve\" (i.e. a not-straight line), it is more like a cloud of points in the field -- these points are not connected.\n\n> Rather than getting confused by the meaning of the words which you might assume, rather try to get confused by the mathematically correct definition of a \"Elliptic Curve\": it's a smooth, projective algebraic curve of genus one and third degree with a distinct point O (at infinity). Or maybe just ignore the term and continue -- it's not really necessary to get it running and you'll see where this is going anyways. Maybe it will all make sense in the end."︡{"metadata":{},"cell_type":"markdown"}
+"## Elliptic Curve Equation\nIf we're talking about an elliptic curve in Fp, what we're talking about is a cloud of points which fulfill the \"curve equation\". This equation is:\n\n$ y^2 = x^3+ax+b \\pmod p$\n\nHere, $y, x, a$ and $b$ are all within $F_p$, i.e. they are integers modulo $p$. The coefficients $a$ and $b$ are the so-called characteristic coefficients of the curve -- they determine what points will be on the curve.\n\nNote that the curve coefficients have to fulfill one condition:\n\n$4a^3+27b^2 \\neq 0$\n\nThis condition guarantees that the curve will not contain any singularities."︡{"metadata":{},"cell_type":"markdown"}
+"## Point representation\nRepresenting a point on the curve is most intuitively done in the so-called affine projection. Points which are represented in affine coordinates are vectors with an x and y component, just like in an euclidian coordinate system. The only difference is that the x and y values are also integers modulo p. There is one exception: One point at infinity, called O, is present on any curve. To denote points, uppercase letters will be used -- to denote integers, lowercase letters will come into play:\n\n$A =(a_x, a_y)$"︡{"metadata":{},"cell_type":"markdown"}
+"F = FiniteField(17)                  # Generate a finite field\nprint(F)"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":1,"outputs":[]}
+"F(3)  # Generate an integer over the field"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":2,"outputs":[]}
+"type(F(3))                           # Show its type"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":3,"outputs":[]}
+" F(3) * 123                           # Do modular multiplication"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":4,"outputs":[]}
+"F(3) ^ -1                            # Do modular inversion"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":5,"outputs":[]}
+"F(3) * 6                             # Check the result for correctness"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":6,"outputs":[]}
+" F(8).sqrt()                          # Square root an invertible integer"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":7,"outputs":[]}
+"F(5) * 5                             # Check the result"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":8,"outputs":[]}
+"F(3).sqrt()                          # Square root a non-invertible integer"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":9,"outputs":[]}
+"(F(3).sqrt()) ^ 2                    # Check the result"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":10,"outputs":[]}
+"F = FiniteField(263)                  # Generate a finite field\nC = EllipticCurve(F, [ 2, 3 ])        # Set a, b\nprint(C)"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":12,"outputs":[]}
+"print(C.cardinality())                # Count number of points on curve"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":13,"outputs":[]}
+"print(C.points()[:4])                 # Show the first four points"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":14,"outputs":[]}
+"G = C.point((200, 39))\nG"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":15,"outputs":[]}
+"G.order()"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":16,"outputs":[]}
+"[ p for p in C.points() if (p.order() < 10) ]"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":17,"outputs":[]}
+"[ (p.order(), p) for p in C.points() if (p.order() < 10) ]"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":18,"outputs":[]}
+"sorted([ (p.order(), p) for p in C.points() if (p.order() < 10) ])"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":19,"outputs":[]}
+"H = C.point((126, 76))\nH.order()"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":20,"outputs":[]}
+"pts = [ H * x for x in range(H.order()) ]\npts"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":21,"outputs":[]}
+"pts[4]"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":22,"outputs":[]}
+"plot(pts[4])"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":23,"outputs":[]}
+"plot(pts[4]) + plot(pts[5])"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":24,"outputs":[]}
+"sum([ plot(p) for p in pts ])"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":25,"outputs":[]}
+"plot1 = sum([ plot(p, hue = 0.1) for p in pts ])\nplot1"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":26,"outputs":[]}
+"plot(C, aspect_ratio = 1)"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":27,"outputs":[]}
+"plot((plot(C) + plot1), aspect_ratio = 1)"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":29,"outputs":[]}
+""︡{"metadata":{"trusted":true,"collapsed":true},"cell_type":"code","execution_count":null,"outputs":[]}
