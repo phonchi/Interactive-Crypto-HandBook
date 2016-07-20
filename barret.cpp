@@ -22,12 +22,9 @@ Big barret_reduction (Big x, Big m, Big mu)
   q = x;
   q = q >> (bits(m)-1);
   q = mu * q;
-
   q = q >> (bits(m)+1);
-
   temp = pow((Big)2, bits(m)+1);
   x = x % temp;
-  
   cout << "x="<< x << endl;
 
   q =q * m;

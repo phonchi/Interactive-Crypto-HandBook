@@ -48,10 +48,9 @@ Big mont_mul (Big a, Big b, Big p, Big p_p, int inradix)
   temp = 0;
   c = 0;
   temp = pow((Big)2, inradix);
-  if(bits(p)%2==0)
-      iter = bits(p)/inradix;
-  else
-      iter = (bits(p)/inradix)+1;
+  if(bits(p)%2==0)  iter = bits(p)/inradix;
+  else      iter = (bits(p)/inradix)+1;
+
   for (i=0; i< iter; i++){
     // method 1
         q = ((bitvar(c,0,inradix)+bitvar(a,i*inradix,inradix)*bitvar(b,0,inradix))*p_p) % temp;
@@ -102,68 +101,68 @@ int  main()
     a = 155;
     b = 174;
     p = 201;
-        temp = pow((Big)2, 2*bits(p));
-        temp = temp % 201;
+    temp = pow((Big)2, 2*bits(p));
+    temp = temp % 201;
         
-        inradix = 0;
-        radix = 16;// 2^4
-        while (radix > 1){
-          inradix = inradix+1;
-          radix = radix/2;
-        }
-        /*  get  mu  value  */
+    inradix = 0;
+    radix = 16;// 2^4
+    while (radix > 1){
+        inradix = inradix+1;
+        radix = radix/2;
+    }
+    /*  get  mu  value  */
     mu = mont_setup(bitvar(p,0,inradix), inradix);
-        cout << "mu=" << mu <<endl;
+    cout << "mu=" << mu <<endl;
         
-        // using radix2
-        ina = mont_mul(a, temp, p, mu, inradix);
+    // using radix2
+    ina = mont_mul(a, temp, p, mu, inradix);
     inb = mont_mul(b, temp, p, mu, inradix);
-        cout << "ina=" << ina << endl;
-        cout << "inb=" << inb << endl;
+    cout << "ina=" << ina << endl;
+    cout << "inb=" << inb << endl;
     outc =  mont_mul(ina, inb, p, mu, inradix);
     cout << "outc=" << outc << endl;
-        /*  now  reduce a modulo b */
+    /*  now  reduce a modulo b */
     c = mont_mul (outc,(Big)1, p, mu, inradix);
     cout << "number = " << c << endl;
     
-       // using full word, no radix
-       
-        temp = pow((Big)2, 16);
-       
-       mu = mont_setup(p, bits(p));
-       cout << "mu2=" << mu <<endl;
-       
-       temp = temp % 201;
-       ina = mont_full(a, temp, p, mu);
-       inb = mont_full(b, temp, p, mu);
-       outc = mont_full(ina, inb, p, mu);
-       cout <<"ina=" << ina << endl;
-       cout <<"inb=" << inb << endl;
-       cout <<"outc=" << outc << endl;
-       c = mont_full(outc, (Big)1, p, mu);
-       cout << "number2 = " << c << endl;
+    // using full word, no radix   
+    temp = pow((Big)2, 16);
       
-       modulo(p);
-       //prepare_monty((Big)201);
-       na = a;
-       nb = b;
-       nc = a*b;
-       c = nc;
-       /*
-       nres(a, ina);
-       nres(b, inb);
-       nres_modmult(ina, inb , outc);
-       redc(outc,c);
-       */
-       temp= inverse(a, p);
-       //temp((Big)na.getzzn());
-       temp = 26*temp;
-       cout << "ina=";
-       otnum(na.getzzn(), stdout);
-       cout << "inb=" ;
-       otnum(nb.getzzn(), stdout);
-       cout << "outc=";
-       otnum(nc.getzzn(), stdout);
-       cout << "number3=" <<  c << endl;    
+    mu = mont_setup(p, bits(p));
+    cout << "mu2=" << mu <<endl;
+       
+    temp = temp % 201;
+    ina = mont_full(a, temp, p, mu);
+    inb = mont_full(b, temp, p, mu);
+    outc = mont_full(ina, inb, p, mu);
+    cout <<"ina=" << ina << endl;
+    cout <<"inb=" << inb << endl;
+    cout <<"outc=" << outc << endl;
+    c = mont_full(outc, (Big)1, p, mu);
+    cout << "number2 = " << c << endl;
+      
+    // Using built-in montgomery multiplication
+    modulo(p);
+    //prepare_monty((Big)201);
+    na = a;
+    nb = b;
+    nc = a*b;
+    c = nc;
+    /*
+    nres(a, ina);
+    nres(b, inb);
+    nres_modmult(ina, inb , outc);
+    redc(outc,c);
+    */
+    temp= inverse(a, p);
+    //temp((Big)na.getzzn());
+    temp = 26*temp;
+    cout << "ina=";
+    otnum(na.getzzn(), stdout);
+    cout << "inb=" ;
+    otnum(nb.getzzn(), stdout);
+    cout << "outc=";
+    otnum(nc.getzzn(), stdout);
+    cout << "number3=" <<  c << endl;    
     return  1;
 }
