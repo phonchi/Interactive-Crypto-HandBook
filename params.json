@@ -1,0 +1,6 @@
+{
+  "name": "Ineractive-crypto-handbook",
+  "tagline": "An Interactive Way To Illustrate Modern Cryptography for IoT",
+  "body": "## Interactive Cryptography Handbook\r\n\r\nThis is a quick tour for cryptography in chinese\r\n\r\nHope the interactive style could help you quickly capture the ideas behind modern cryptography \r\n\r\nReference:\r\n\r\nNacl in HW\r\nhttp://eprint.iacr.org/2016/330.pdf\r\n\r\nECC: http://www.johannes-bauer.com/compsci/ecc/\r\nhttps://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/\r\nhttps://www.nayuki.io/page/cryptographic-primitives-in-plain-python\r\nhttps://cryptography.io/en/latest/\r\n\r\n\r\nhttp://jdege.us/crypto-python/index.html\r\nhttp://www.laurentluce.com/posts/python-and-cryptography-with-pycrypto/\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
