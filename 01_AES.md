@@ -9,7 +9,7 @@ Symmetric keys 演算法可分為: stream and block ciphers.
 ## Block Cipher
 
 ### AES
-最廣為使用的 symmetric cipher 和 standard 是 the AES block cipher, 見 [FIPS PUB 197](http://csrc.nist.gov/publications/fips/fips197) 
+最廣為使用的 symmetric cipher 和 standard 是 AES block cipher， 見 [FIPS PUB 197](http://csrc.nist.gov/publications/fips/fips197) 
 
 建議可先看[這個](http://www.formaestudio.com/rijndaelinspector/archivos/Rijndael_Animation_v4_eng.swf) 動畫來複習AES!
 
@@ -17,7 +17,7 @@ Symmetric keys 演算法可分為: stream and block ciphers.
 
 第一步我們先進行放寬第一章所說的byte長度的問題
 
-> AES 為 Rijndael cipher的一部分. AES 以 128-bits (16 bytes) 固定為BLOCK SIZE; 而data必須經過padding來滿足block size的倍數.例如 "ABCDABCDABCDABCDABCDABCDABCDABCD" 這樣的訊息不用做padding。 但若訊息是 "ABCDABCDABCDABCDABCDABCDABCD" 則需要 4 byte的 padding
+> AES 為 Rijndael cipher的一部分。 AES 以 128-bits (16 bytes) 固定為BLOCK SIZE; 而data必須經過padding來滿足block size的倍數.例如 "ABCDABCDABCDABCDABCDABCDABCDABCD" 這樣的訊息不用做padding。 但若訊息是 "ABCDABCDABCDABCDABCDABCDABCD" 則需要 4 byte的 padding
 
 > 一個常見的padding scheme為將 0x80 當作第一個padding的byte，然後用 0x00 填滿剩下的padding。 例如前述例子會變成:"ABCDABCDABCDABCDABCDABCDABCD\x80\x00\x00\x00"
 
@@ -174,9 +174,9 @@ print plaintext
 
 或許直覺會想到MD5或SHA，不過他們缺點是digest可以被隨意改變(且MD5已不再安全)。
 
-這邊我們需要的是, 將 hash function 加入 key 來產生 digest。也就是我們需要 HMAC (which is a general framework)。另外，實務上我們不會用跟加密一樣的key。 我們需要的是 **new, freshly generated key**。
+這邊我們需要的是, 將 hash function 加入 key 來產生 digest。也就是我們需要 HMAC (which is also a general framework)。另外，實務上我們不會用跟加密一樣的key。 我們需要的是 **new, freshly generated key**。
 
-這個framework中，我們需要加入SHA函數.因為我們使用 AES-256, 所以必須使用 SHA-512 (Remember the birthday attack~). 我們的 message tags 是經由 HMAC-SHA-512 來計算. 將產生 64-byte digest. 我們以下定義一些constant~
+這個framework中，我們需要加入SHA函數。因為我們使用 AES-256, 所以必須使用 SHA-512 (Remember the birthday attack~). 我們的 message tags 是經由 HMAC-SHA-512 來計算. 將產生 64-byte digest. 我們以下定義一些constant~
 
 
 ```python
